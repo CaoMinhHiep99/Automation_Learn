@@ -3,3 +3,4 @@ robotframework~=5.0.1
 
 requests
 selenium
+playwright
