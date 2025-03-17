@@ -1,0 +1,18 @@
+1728880613557	geckodriver	INFO	Listening on 127.0.0.1:57135
+1728880616657	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57136" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\cmhiep\\AppData\\Local\\Temp\\rust_mozprofileE31p8b"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1728880620576	Marionette	INFO	Marionette enabled
+1728880621772	Marionette	INFO	Listening on port 57152
+Read port: 57152
+WebDriver BiDi listening on ws://127.0.0.1:57136
+1728880622549	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57136/devtools/browser/c2144cb1-4065-47bd-9697-d7637d18427f
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://katalon-demo-cura.herokuapp.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://katalon-demo-cura.herokuapp.com."
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://katalon-demo-cura.herokuapp.com/#appointment" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://katalon-demo-cura.herokuapp.com/profile.php#login" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://katalon-demo-cura.herokuapp.com/" ({})
+1728880802604	Marionette	INFO	Stopped listening on port 57152
+Dynamically enable window occlusion 1

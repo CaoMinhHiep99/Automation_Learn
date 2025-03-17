@@ -1,0 +1,6 @@
+${username}	${password}	${expected_value}
+	ThisIsNotAPassword	Login failed! Please ensure the username and password are valid.
+abc	ThisIsNotAPassword	Login failed! Please ensure the username and password are valid.
+John Doe		Login failed! Please ensure the username and password are valid.
+John Doe	abc	Login failed! Please ensure the username and password are valid.
+John Doe	ThisIsNotAPassword	Make Appointment
