@@ -150,14 +150,12 @@
 #         for j in samp_list[:max_width]:
 #             samp_list.remove(j)
 #     return '\n'.join(temp_list)
+
 # def wrap(samp_string, max_width):
 #     result = []
 #     for i in range(0, len(samp_string)-1, max_width):
 #         result.append(''.join(samp_string[i:i+max_width]))
 #     return '\n'.join(result)
-
-
-
 
 # if __name__ == '__main__':
 #     # string, max_width = input(), int(input())
@@ -302,35 +300,229 @@
 #                     lst.append([i,j,o])
 #     print(lst)
 
-import argparse
-import json
+# import argparse
+# import json
 
-def test_dict(dic, li):
-    """
-    In ra dictionary và list
-    """
-    print("Dictionary:", dic)
-    print("List:", li)
+# def test_dict(dic, li):
+#     """
+#     In ra dictionary và list
+#     """
+#     print("Dictionary:", dic)
+#     print("List:", li)
+
+# if __name__ == '__main__':
+#     # Tạo đối số cho argparse
+#     parser = argparse.ArgumentParser()
+
+#     # Đối số đầu tiên: work_queue_input là chuỗi JSON cho dictionary
+#     parser.add_argument('work_queue_input', type=str, help="Input work queue (JSON format)")
+
+#     # Đối số thứ hai: doc_type_list là chuỗi cho list
+#     parser.add_argument('doc_type_list', type=str, help="Input list of document types")
+
+#     # Phân tích cú pháp các đối số từ command line
+#     args = parser.parse_args()
+
+#     # Chuyển đổi chuỗi JSON thành dictionary
+#     n = json.loads(args.work_queue_input)
+
+#     # Chuyển đổi chuỗi list thành list
+#     m = json.loads(args.doc_type_list)
+
+#     # Gọi hàm test_dict với dictionary và list đã phân tích
+#     test_dict(n, m)
+
+# def split_and_join(line: str):
+#     line = line.split()
+#     line = '-'.join(line)
+#     return line
+
+# if __name__ == '__main__':
+#     line = input()
+#     result = split_and_join(line)
+#     print(result)
+
+# def mutate_string(string: str, position: int, character: str):
+#     l = list(string)
+#     l = l[:position] + [character] + l[position + 1:]
+#     string = ''.join(l)
+#     return string
+
+# if __name__ == '__main__':
+#     s = input()
+#     i = input()
+#     c = input()
+#     s_new = mutate_string(s, int(i), c)
+#     print(s_new)
+
+# def count_substring(string, sub_string):
+#     exp_result = 0
+#     for i in range(len(string)):
+#         if string[i:len(sub_string) + i] == sub_string:
+#             exp_result += 1
+#         elif len(string[i:len(sub_string) + i]) < len(sub_string):
+#             break
+#     return exp_result
+
+
+# if __name__ == '__main__':
+#     string = input().strip()
+#     sub_string = input().strip()
+#     count = count_substring(string, sub_string)
+#     print(count)
+
+# if __name__ == '__main__':
+#     s = input()
+#     expect_result = []
+
+#     r = 'False'
+#     for i in list(s):
+#         if i.isalnum():
+#             r = 'True'
+#             break
+#     expect_result.append(r)
+
+#     r = 'False'
+#     for i in list(s):
+#         if i.isalpha():
+#             r = 'True'
+#             break
+#     expect_result.append(r)
+
+#     r = 'False'
+#     for i in list(s):
+#         if i.isdigit():
+#             r = 'True'
+#             break
+#     expect_result.append(r)
+
+#     r = 'False'
+#     for i in list(s):
+#         if i.islower():
+#             r = 'True'
+#             break
+#     expect_result.append(r)
+
+#     r = 'False'
+#     for i in list(s):
+#         if i.isupper():
+#             r = 'True'
+#             break
+#     expect_result.append(r)
+
+#     expect_result = '\n'.join(expect_result)
+#     print(expect_result)
+
+def print_formatted(number: int):
+
+    dec_num = []
+    oct_num = []
+    hex_num = []
+    bin_num = []
+    for i in range(1, number + 1):
+        dec_num.append(str(i))
+        oct_num.append(oct(i)[2:])
+        hex_num.append(hex(i)[2:].upper())
+        bin_num.append(bin(i)[2:])
+    mbin_len = len(bin(number)[2:])
+    for i in range(0, number):
+        len_dec = mbin_len - (len(dec_num[i])-1)
+        len_oct = mbin_len - (len(oct_num[i])-1)
+        len_hex = mbin_len - (len(hex_num[i])-1)
+        len_bin = mbin_len - (len(bin_num[i])-1)
+        num_index = f'{" " * (len_dec-1)}{dec_num[i]}{" " * len_oct}{oct_num[i]}{" " * len_hex}{hex_num[i]}{" " * len_bin}{bin_num[i]}'
+        print(num_index)
+
 
 if __name__ == '__main__':
-    # Tạo đối số cho argparse
-    parser = argparse.ArgumentParser()
+    # n = int(input())
+    print_formatted(99)
 
-    # Đối số đầu tiên: work_queue_input là chuỗi JSON cho dictionary
-    parser.add_argument('work_queue_input', type=str, help="Input work queue (JSON format)")
 
-    # Đối số thứ hai: doc_type_list là chuỗi cho list
-    parser.add_argument('doc_type_list', type=str, help="Input list of document types")
+# def print_formatted(number):
+#     # your code goes here
+#     for i in range(1, number+1):
+#         l=len('{0:b}'.format(number))
+#         l=int(l)
+#         print('{0:{width}d} {0:{width}o} {0:{width}X} {0:{width}b}'.format(i,width=l))
 
-    # Phân tích cú pháp các đối số từ command line
-    args = parser.parse_args()
+# if __name__ == '__main__':
+#     n = int(input())
+#     print_formatted(n)
 
-    # Chuyển đổi chuỗi JSON thành dictionary
-    n = json.loads(args.work_queue_input)
+# if __name__ == '__main__':
+#     n = int(input())
+#     list_n = []
+#     while n > 0:
+#         i = n - 1
+#         list_n.append(i)
+#         n = i
+#     list_n = list_n[::-1]
+#     for i in list_n:
+#         print(f"{i*i}")
 
-    # Chuyển đổi chuỗi list thành list
-    m = json.loads(args.doc_type_list)
 
-    # Gọi hàm test_dict với dictionary và list đã phân tích
-    test_dict(n, m)
+# def swap_case(s):
+#     list_s = list(s)
+#     list_exp = []
+#     for i in list_s:
+#         if i.isupper():
+#             list_exp.append(i.lower())
+#         else:
+#             list_exp.append(i.upper())
+#     text = ''.join(list_exp)
+#     return text
 
+# if __name__ == '__main__':
+#     s = input()
+#     result = swap_case(s)
+#     print(result)
+
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     for i in range(n):
+#         try:
+#             x, y = input().split()
+#             x = int(x)
+#             y = int(y)
+#             print(x // y)
+#         except ZeroDivisionError as e:
+#             print(f"Error Code: {e}")
+#         except ValueError as e:
+#             print(f"Error Code: {e}")
+
+
+# def print_formatted(number: int):
+#     # Tạo danh sách cho các hệ thống số
+#     dec_num = []
+#     oct_num = []
+#     hex_num = []
+#     bin_num = []
+    
+#     # Điền dữ liệu vào các danh sách
+#     for i in range(1, number + 1):
+#         dec_num.append(str(i))
+#         oct_num.append(oct(i)[2:])
+#         hex_num.append(hex(i)[2:].upper())  # Chuyển đổi chữ cái thành chữ hoa
+#         bin_num.append(bin(i)[2:])
+    
+#     # Tính độ dài của số nhị phân lớn nhất để căn chỉnh
+#     mbin_len = len(bin(number)[2:])
+    
+#     # In các số đã được căn chỉnh
+#     for i in range(number):
+#         len_dec = len(dec_num[i])
+#         len_oct = len(oct_num[i])
+#         len_hex = len(hex_num[i])
+#         len_bin = len(bin_num[i])
+
+#         # Căn chỉnh và in từng số
+#         num_index = f'{" " * (mbin_len - len_dec)}{dec_num[i]}'
+#         num_index += f'{" " * (mbin_len - len_oct)}{oct_num[i]}'
+#         num_index += f'{" " * (mbin_len - len_hex)}{hex_num[i]}'
+#         num_index += f'{" " * (mbin_len - len_bin)}{bin_num[i]}'
+#         print(num_index)
+
+# # Test the function
+# print_formatted(5)
