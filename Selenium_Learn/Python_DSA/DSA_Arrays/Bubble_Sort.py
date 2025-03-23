@@ -413,30 +413,30 @@
 #     expect_result = '\n'.join(expect_result)
 #     print(expect_result)
 
-def print_formatted(number: int):
+# def print_formatted(number: int):
 
-    dec_num = []
-    oct_num = []
-    hex_num = []
-    bin_num = []
-    for i in range(1, number + 1):
-        dec_num.append(str(i))
-        oct_num.append(oct(i)[2:])
-        hex_num.append(hex(i)[2:].upper())
-        bin_num.append(bin(i)[2:])
-    mbin_len = len(bin(number)[2:])
-    for i in range(0, number):
-        len_dec = mbin_len - (len(dec_num[i])-1)
-        len_oct = mbin_len - (len(oct_num[i])-1)
-        len_hex = mbin_len - (len(hex_num[i])-1)
-        len_bin = mbin_len - (len(bin_num[i])-1)
-        num_index = f'{" " * (len_dec-1)}{dec_num[i]}{" " * len_oct}{oct_num[i]}{" " * len_hex}{hex_num[i]}{" " * len_bin}{bin_num[i]}'
-        print(num_index)
+#     dec_num = []
+#     oct_num = []
+#     hex_num = []
+#     bin_num = []
+#     for i in range(1, number + 1):
+#         dec_num.append(str(i))
+#         oct_num.append(oct(i)[2:])
+#         hex_num.append(hex(i)[2:].upper())
+#         bin_num.append(bin(i)[2:])
+#     mbin_len = len(bin(number)[2:])
+#     for i in range(0, number):
+#         len_dec = mbin_len - (len(dec_num[i])-1)
+#         len_oct = mbin_len - (len(oct_num[i])-1)
+#         len_hex = mbin_len - (len(hex_num[i])-1)
+#         len_bin = mbin_len - (len(bin_num[i])-1)
+#         num_index = f'{" " * (len_dec-1)}{dec_num[i]}{" " * len_oct}{oct_num[i]}{" " * len_hex}{hex_num[i]}{" " * len_bin}{bin_num[i]}'
+#         print(num_index)
 
 
-if __name__ == '__main__':
-    # n = int(input())
-    print_formatted(99)
+# if __name__ == '__main__':
+#     # n = int(input())
+#     print_formatted(99)
 
 
 # def print_formatted(number):
@@ -526,3 +526,359 @@ if __name__ == '__main__':
 
 # # Test the function
 # print_formatted(5)
+
+# Complete the solve function below.
+# def solve(s):
+#     """
+#     """
+#     conv_list = list(s)
+#     for i in range(len(conv_list)):
+#         if conv_list[i] == ' ':
+#             conv_list[i+1] = conv_list[i+1].upper()
+#     for i in range(len(conv_list)):
+#         if conv_list[i].isalpha():
+#             conv_list[i] = conv_list[i].upper()
+#             break
+#     exp_str = ''.join(conv_list)
+#     return exp_str
+
+
+# if __name__ == '__main__':
+    # fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    # s = input()
+
+    # result = solve(s)
+
+    # fptr.write(result + '\n')
+
+    # fptr.close()
+
+# def average(array):
+#     # your code goes here
+#     arr = set(array)
+#     exp_result = float(sum(arr))/len(arr)
+#     return exp_result
+# if __name__ == '__main__':
+#     n = int(input())
+#     arr = list(map(int, input().split()))
+#     result = average(arr)
+#     print(result)
+
+
+# from itertools import permutations
+# if __name__ == '__main__':
+#     s = input()
+#     n = int(input())
+#     exp_result = ''
+#     for i in permutations(sorted(s), n):
+#         exp_result += ''.join(i) + '\n'
+#     print(exp_result)
+
+
+# n = int(input())
+# s = set(map(int, input().split()))
+
+# for i in range(int(input())):
+#     command = input().split()
+#     if command[0] == 'pop':
+#         s.pop()
+#     elif command[0] == 'remove':
+#         s.remove(int(command[1]))
+#     elif command[0] == 'discard':
+#         s.discard(int(command[1]))
+
+# print(sum(s))
+
+
+# n1 = int(input())
+# n2 = int(input())
+# a = n1//n2
+# b = n1%n2
+# print(f"({a}, {b})")
+
+
+# n1 = int(input())
+# n2 = int(input())
+# n3 = int(input())
+# a = pow(n1, n2)
+# b = pow(n1, n2, n3)
+# print(a)
+# print(b)
+
+
+# n_list = []
+# for i in range(4):
+#     n = int(input())
+#     n_list.append(n)
+
+# n1 = pow(n_list[0], n_list[1]) + pow(n_list[2], n_list[3])
+# print(n1)
+
+# n = int(input())
+# s = set(map(int, input().split()))
+
+# for i in range(int(input())):
+#     command = input().split()
+#     u = set(map(int, input().split()))
+#     if command[0] == 'intersection_update':
+#         s.intersection_update(u)
+#     elif command[0] == 'update':
+#         s.update(u)
+#     elif command[0] == 'symmetric_difference_update':
+#         s.symmetric_difference_update(u)
+#     elif command[0] == 'difference_update':
+#         s.difference_update(u)
+# print(sum(s))
+
+# for i in range(int(input())):
+#     n1 = int(input())
+#     u1 = set(map(int, input().split()))
+#     n2 = int(input())
+#     u2 = set(map(int, input().split()))
+#     if u1.issubset(u2):
+#         print(True)
+#     else:
+#         print(False)
+
+
+# num_index = input().split()
+# total_list = []
+# for i in range(int(num_index[1])):
+#     num_list = list(map(float, input().split()))
+#     total_list.append(num_list)
+# zip_tup = list(zip(*total_list))
+# for i in range(int(num_index[0])):
+#     print(sum(zip_tup[i])/int(num_index[1]))
+
+
+# x, k = list(map(int,input().split()))
+# p = eval(input())
+# if p == k:
+#     print(True)
+# else:
+#     print(False)
+
+
+# e_num = int(input())
+# e_stu = set(map(int, input().split()))
+# f_num = int(input())
+# f_stu = set(map(int, input().split()))
+
+# print(len(e_stu.difference(f_stu)))
+
+
+# if __name__ == '__main__':
+#     nm = input().split()
+#     n = int(nm[0])
+#     m = int(nm[1])
+#     arr = []
+#     for _ in range(n):
+#         arr.append(list(map(int, input().rstrip().split())))
+#     k = int(input())
+
+#     for i in range(n - 1):
+#         for j in range(n - i - 1):
+#             if arr[j][k] > arr[j + 1][k]:
+#                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+#     exp_arr = ''
+#     for i in arr:
+#         exp_arr += ' '.join(map(str, i)) + "\n"
+#     print(exp_arr)
+
+# def check_palindromic(p):
+#     p_list = []
+#     for i in p:
+#         if str(i) == str(i)[::-1]:
+#             p_list.append(True)
+#         elif i < 0:
+#             return False
+#         else:
+#             p_list.append(False)
+#     if True in p_list:
+#         return True
+#     else:
+#         return False
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     p = list(map(int, input().split()))
+#     exp_result = check_palindromic(p)
+#     print(exp_result)
+
+# if __name__ == '__main__':
+#     m = int(input())
+#     for i in range(m):
+#         n = input()
+#         try:
+#             if '.' in n:
+#                 n = float(n)
+#                 print(True)
+#             else:
+#                 print(False)
+#         except ValueError:
+#             print(False)
+
+# def bubble_sort(arr):
+#     for i in range(len(arr) - 1):
+#         for j in range(len(arr) - i - 1):
+#             if arr[j] > arr[j + 1]:
+#                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+#     return arr
+
+# if __name__ == '__main__':
+#     n = input()
+#     n_len = len(n)
+#     s_list = list(n)
+#     num_list = []
+#     text_list = []
+#     for i in range(n_len):
+#         if s_list[i].isdigit():
+#             num_list.append(s_list[i])
+#         else:
+#             text_list.append(s_list[i])
+#     upper_text = []
+#     lower_text = []
+#     odd_num = []
+#     even_num = []
+#     for i in range(len(text_list)):
+#         if text_list[i].isupper():
+#             upper_text.append(text_list[i])
+#         else:
+#             lower_text.append(text_list[i])
+
+#     for i in range(len(num_list)):
+#         if int(num_list[i])%2 == 0:
+#             even_num.append(int(num_list[i]))
+#         else:
+#             odd_num.append(int(num_list[i]))
+#     lower_text = bubble_sort(lower_text)
+#     upper_text = bubble_sort(upper_text)
+#     odd_num = bubble_sort(odd_num)
+#     even_num = bubble_sort(even_num)
+#     sorted_num = list(map(str, odd_num)) + list(map(str, even_num))
+#     exp_list = lower_text + upper_text + sorted_num
+#     exp_str = ''.join(exp_list)
+#     print(exp_str)
+
+# regex_pattern = r"\D"   # Do not delete 'r'.
+
+# import re
+# print("\n".join(re.split(regex_pattern, input())))
+
+
+# if __name__ == '__main__':
+#     thickness = int(input()) #This must be an odd number
+#     c = 'H'
+
+#     #Top Cone
+#     for i in range(thickness):
+#         print((c*i).rjust(thickness-1)+c+(c*i).ljust(thickness-1))
+
+#     #Top Pillars
+#     for i in range(thickness+1):
+#         print((c*thickness).center(thickness*2)+(c*thickness).center(thickness*6))
+
+#     #Middle Belt
+#     for i in range((thickness+1)//2):
+#         print((c*thickness*5).center(thickness*6))
+
+#     #Bottom Pillars
+#     for i in range(thickness+1):
+#         print((c*thickness).center(thickness*2)+(c*thickness).center(thickness*6))
+
+#     #Bottom Cone
+#     for i in range(thickness):
+#         print(((c*(thickness-i-1)).rjust(thickness)+c+(c*(thickness-i-1)).ljust(thickness)).rjust(thickness*6))
+
+
+# if __name__ == '__main__':
+#     nm = input().split()
+#     n = int(nm[0])
+#     m = int(nm[1])
+#     a = []
+#     b = []
+#     for i in range(n):
+#         text = input()
+#         a.append(text)
+#     for i in range(m):
+#         text = input()
+#         b.append(text)
+#     exp_results = []
+#     for i in range(m):
+#         for j in range(n):
+#             if b[i] == a[j]:
+#                 exp_results.append(f"{j+1}")
+#             elif b[i] not in a:
+#                 exp_results.append("-1")
+#                 break
+#         print(" ".join(exp_results))
+#         exp_results.clear()
+
+# import calendar
+# l_in = list(map(int,input().split()))
+# a = calendar.weekday(l_in[2], l_in[0], l_in[1])
+# days = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY']
+# print(days[a])
+
+
+# from collections import deque
+
+# n = int(input())
+# a = deque([])
+# for i in range(n):
+#     cmd_in = input().split()
+#     c = str(cmd_in[0])
+#     if len(cmd_in) == 2:
+#         n = int(cmd_in[1])
+#     if 'appendleft' == c:
+#         a.appendleft(n)
+#     elif 'append' == c:
+#         a.append(n)
+#     elif 'pop' == c:
+#         a.pop()
+#     elif 'popleft' == c:
+#         a.popleft()
+
+# print(' '.join(map(str, a)))
+
+# if __name__ == '__main__':
+#     e = int(input())
+#     stu_e = list(map(int, input().split()))
+#     f = int(input())
+#     stu_f = list(map(int, input().split()))
+#     exp_results = []
+#     for i in stu_e:
+#         if i in stu_f and i not in exp_results:
+#             exp_results.append(i)
+#     print(len(exp_results))
+
+
+# if __name__ == '__main__':
+#     n = input()
+#     set_n = set(map(int, input().split()))
+#     m = input()
+#     set_m = set(map(int, input().split()))
+#     diff_n = set_n.difference(set_m)
+#     diff_m = set_m.difference(set_n)
+#     diff_n.update(diff_m)
+#     diff_n = list(diff_n)
+#     for i in range(len(diff_n) - 1):
+#         for j in range(len(diff_n) - i -1):
+#             if diff_n[j] > diff_n[j+1]:
+#                 diff_n[j], diff_n[j + 1] = diff_n[j + 1] , diff_n[j]
+#     for i in diff_n:
+#         print(i)
+
+
+from itertools import combinations
+
+if __name__ == '__main__':
+    text_in = input().split()
+    t = str(text_in[0])
+    n = int(text_in[1])
+    a = reversed(list(range(n)))
+    for i in a:
+        combi = sorted((list(combinations(t, n - i))))
+        for j in combi:
+            print(''.join(j))
