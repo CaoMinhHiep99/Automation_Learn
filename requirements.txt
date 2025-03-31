@@ -4,3 +4,5 @@ robotframework~=5.0.1
 requests
 selenium
 playwright
+
+# python 3.10.11

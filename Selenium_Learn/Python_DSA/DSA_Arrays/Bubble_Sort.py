@@ -871,14 +871,14 @@
 #         print(i)
 
 
-from itertools import combinations
+# from itertools import combinations
 
-if __name__ == '__main__':
-    text_in = input().split()
-    t = str(text_in[0])
-    n = int(text_in[1])
-    a = reversed(list(range(n)))
-    for i in a:
-        combi = sorted((list(combinations(t, n - i))))
-        for j in combi:
-            print(''.join(j))
+# if __name__ == '__main__':
+#     text_in = input().split()
+#     t = str(text_in[0])
+#     n = int(text_in[1])
+#     a = reversed(list(range(n)))
+#     for i in a:
+#         combi = sorted((list(combinations(t, n - i))))
+#         for j in combi:
+#             print(''.join(j))

@@ -871,14 +871,70 @@
 #         print(i)
 
 
-from itertools import combinations
+# from itertools import combinations
 
-if __name__ == '__main__':
-    text_in = input().split()
-    t = str(text_in[0])
-    n = int(text_in[1])
-    a = reversed(list(range(n)))
-    for i in a:
-        combi = sorted((list(combinations(t, n - i))))
-        for j in combi:
-            print(''.join(j))
+# if __name__ == '__main__':
+#     text_in = input().split()
+#     t = str(text_in[0])
+#     n = int(text_in[1])
+#     a = reversed(list(range(n)))
+#     t = sorted(t)
+#     for i in a:
+#         combi = (list(combinations(t, n - i)))
+#         for j in combi:
+#             print(''.join(j))
+
+
+# if __name__ == '__main__':
+#     a = set(map(int, input().split()))
+#     n = int(input())
+#     m = []
+#     for i in range(n):
+#         s = set(map(int, input().split()))
+#         m.append(s)
+#     exp_results = []
+#     for i in m:
+#         if a >= i:
+#             exp_results.append(True)
+#         else:
+#             exp_results.append(False)
+#     if False in exp_results:
+#         print(False)
+#     else:
+#         print(True)
+
+# if __name__ == '__main__':
+#     e_stu = int(input())
+#     set_e = set(map(int, input().split()))
+#     f_stu = int(input())
+#     set_f = set(map(int, input().split()))
+
+#     diff_s = set_e.symmetric_difference(set_f)
+#     print(len(diff_s))
+
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     lst = list(map(int, input().split()))
+#     d = {}
+#     for i in lst:
+#         if i in d:
+#             d[i] += 1
+#         else:
+#             d[i] = 1
+#     for i in d:
+#         if d[i] == 1:
+#             print(i)
+#             break
+
+
+# from itertools import combinations_with_replacement
+
+# if __name__ == '__main__':
+#     text_in = input().split()
+#     t = str(text_in[0])
+#     n = int(text_in[1])
+#     t = sorted(t)
+#     combi = (list(combinations_with_replacement(t, n)))
+#     for j in combi:
+#         print(''.join(j))
