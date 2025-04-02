@@ -137,7 +137,6 @@
 
 
 # import textwrap
-
 # def wrap(samp_string, max_width):
 #     temp_list = []
 #     num_str = len(samp_string)
@@ -151,17 +150,11 @@
 #             samp_list.remove(j)
 #     return '\n'.join(temp_list)
 
-# def wrap(samp_string, max_width):
-#     result = []
-#     for i in range(0, len(samp_string)-1, max_width):
-#         result.append(''.join(samp_string[i:i+max_width]))
-#     return '\n'.join(result)
-
 # if __name__ == '__main__':
-#     # string, max_width = input(), int(input())
+#     string, max_width = input(), int(input())
 #     samp_string = 'ABCDEFGHIJKLIMNOQRSTUVWXYZ'
 #     max_width = 5
-#     result = wrap(samp_string, max_width)
+#     result = wrap(string, max_width)
 #     print(result)
 
 
@@ -938,3 +931,18 @@
 #     combi = (list(combinations_with_replacement(t, n)))
 #     for j in combi:
 #         print(''.join(j))
+
+
+cube=lambda x: x**3
+
+def fibo(n):
+    l = []
+    for i in range(n) :
+        if i <= 1 :
+                l.append(i)
+        else:
+                f = int(l[i-2])+int(l[i-1])
+                l.append(f)
+    return l
+n = int(input())
+print(list(map(cube, fibo(n))))
